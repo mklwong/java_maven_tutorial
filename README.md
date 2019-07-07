@@ -5,22 +5,22 @@ This section contains tutorial notes.
 Maven creates a directory tree that looks like the following:
 ```
 root
-|==src
-|   |==main
-|   |   |==java
-|   |       |==<package_name>
-|   |             |==App.java
+|--src
+|   |--main
+|   |   |--java
+|   |       |--<package_name>
+|   |             |--App.java
 |   |
-|   |==test
-|       |==java
-|           |==<package_name>
-|                 |==AppTest.java
+|   |--test
+|       |--java
+|           |--<package_name>
+|                 |--AppTest.java
 |
-|==target
-|   |==<package_jar_name>.jar
-|   |==...{bunch of extra output folders}
+|--target
+|   |--<package_jar_name>.jar
+|   |--...{bunch of extra output folders}
 |
-|==pom.xml
+|--pom.xml
 ```
 
 All source codes goes in root/src/main/java/<package_name> with the package hierachy beginning at <package_name>
@@ -37,7 +37,7 @@ To set the entry point of the output jar, you need to find the `maven-jar-plugin
 <configuration>
   <archive>
     <manifest>
-      <mainClass>my_test_maven.App</mainClass>
+      <mainClass>{package_name}.App</mainClass>
     </manifest>
   </archive>
 </configuration>
