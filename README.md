@@ -1,4 +1,4 @@
-This section contains tutorial notes.
+This section contains tutorial notes for building Java packages with Maven.
 
 ## Directory Structure
 
@@ -23,11 +23,13 @@ root
 |--pom.xml
 ```
 
-All source codes goes in root/src/main/java/<package_name> with the package hierachy beginning at <package_name>
+All source codes goes in `root/src/main/java/<package_name>` with the package hierachy beginning at `<package_name>`
 
-All unit tests goes into root/src/test/java/<package_name> with packages importable from <package_name>
+All unit tests goes into `root/src/test/java/<package_name>` with packages importable from `<package_name>`
 
-pom.xml controls the way the maven compiles the output and how it runs etc.
+The `.jar` file in the `target` folder contains the output that the maven `package` command generates (in Visual Studio Code).
+
+`pom.xml` controls the way the maven compiles the output and how it runs etc.
 
 ## Jar entry point
 
