@@ -1,34 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!--
-This section contains tutorial notes.
-
-Maven creates a directory tree that looks like the following:
-root
-|==src
-|   |==main
-|   |   |==java
-|   |       |==<package_name>
-|   |             |==App.java
-|   |
-|   |==test
-|       |==java
-|           |==<package_name>
-|                 |==AppTest.java
-|
-|==target
-|   |==<package_jar_name>.jar
-|   |==...{bunch of extra output folders}
-|
-|==pom.xml
-
-All source codes goes in root/src/main/java/<package_name> with the package hierachy beginning at <package_name>
-
-All unit tests goes into root/src/test/java/<package_name> with packages importable from <package_name>
-
-pom.xml controls the way the maven compiles the output and how it runs etc.
--->
-
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
@@ -86,7 +57,7 @@ pom.xml controls the way the maven compiles the output and how it runs etc.
                 <mainClass>my_test_maven.App</mainClass> <!--This line specifies the entry point of the jar.-->
               </manifest>
             </archive>
-				  </configuration>
+		  </configuration>
         </plugin>
         <plugin>
           <artifactId>maven-install-plugin</artifactId>
